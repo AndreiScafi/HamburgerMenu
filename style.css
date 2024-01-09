@@ -61,3 +61,18 @@ html {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.banner-btn {
+    width: 35rem;
+    height: 10rem;
+    background: linear-gradient(#16c3cf, #156469);
+    border: none;
+    outline: none;
+    font-family: 'Slabo 27px', serif;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: .4rem;
+    color: #fff;
+    text-shadow: 0 1rem 1rem #000;
+    cursor: pointer;
+}
