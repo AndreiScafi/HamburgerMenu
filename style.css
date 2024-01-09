@@ -42,6 +42,7 @@ html {
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
+    z-index: 100;
 }
 
 .line {
@@ -107,4 +108,60 @@ html {
     right: 0;
     transform: rotateY(-90deg);
     transform-origin: right;
+}
+
+.top-nav {
+    height: 15vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(./images/nav-bg.jpeg) no-repeat 50% 0;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-list {
+    list-style: none;
+    width: 80%;
+    margin: auto;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav-list li {
+    perspective: 50rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-family: 'Slabo 27px', serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #ccc;
+    background-color: #000;
+    letter-spacing: .1rem;
+    padding: .5rem 1rem;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform .3s;
+    display: block;
+    transform-origin: top;
+}
+
+.nav-link:hover {
+    transform: rotateX(90deg);
+}
+
+.nav-link::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    background-color: #000;
+    padding: inherit;
+    color: #16c3cf;
+    transform: rotateX(-90deg);
+    transform-origin: top;
 }
